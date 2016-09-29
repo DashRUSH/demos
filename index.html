@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang=ru>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/jquery-1.11.3.js"></script>
+        <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="js/respond.min.js"></script>
+        <script src="js/click.js"></script>
+
+        <script>
+            var t;
+            function up() {
+                var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+                if(top > 0) {
+                    window.scrollBy(0,-100);
+                    t = setTimeout('up()',20);
+                } else clearTimeout(t);
+                return false;
+            }
+            function makeCheck(email) {
+                var re = /^([a-z0-9_\-]+\.)*[a-z0-9_\-]+@([a-z0-9][a-z0-9\-]*[a-z0-9]\.)+[a-z]{2,6}$/i;
+                alert(re.test(email) ? 'Правильный адрес' : 'Неправильный адрес');
+            }
+        </script>
+
+        <title>Вёрстка</title>
+    </head>
+    
+         <!--Шапка-->
+    <div class="inform">
+        <header>
+            <div class = "title">мои заказы</div>
+        </header>
+    
+        <main>
+            
+            <section class="sort">
+                <section class="sort-title">Сортировать:
+                    <ul>
+                        <li><span class="sort-by">по дате</span>
+                            <span class="down arrow active">&#9660;</span>
+                            <span class="up arrow hide">&#9650;</span>
+                        </li>
+                        <li><span class="sort-by">по готовности</span>
+                            <span class="down arrow active">&#9660;</span>
+                            <span class="up arrow hide">&#9650;</span>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section class="container">
+                <section class="element" id="1">
+                    <img src="images/pic.png" alt="">
+                    <section class="order">
+                        <section class="order_title">
+                            <h2>название заказа</h2>
+                            <span>Статус: в печати</span>
+                        </section>
+                        <section class="details">
+                            <span>Загружен: 11.04.13</span>
+                            <span>Фотополимер покрашенный</span>
+                            <span>Количество экземпляров: 1</span>
+                        </section>
+                        <div class="progress active">ВЫПОЛНЕН НА 60%</div>
+                        <div class="progress accent-color hide">+ Добавить в магазин</div>
+                    </section>
+                </section>
+
+                <section class="element flag" id="2">
+                    <img src="images/pic.png" alt="">
+                    <section class="order">
+                        <section class="order_title">
+                            <h2>название заказа</h2>
+                            <span>Статус: отправлен</span>
+                        </section>
+                        <section class="details">
+                            <span>Загружен: 11.04.13</span>
+                            <span>Фотополимер покрашенный</span>
+                            <span>Количество экземпляров: 1</span>
+                            <span>Цвет: черный</span>
+                            <span>Размер: 160 х 70</span>
+                        </section>
+                        <div class="progress active">ВЫПОЛНЕН НА 60%</div>
+                        <div class="progress accent-color hide">+ Добавить в магазин</div>
+                    </section>
+                </section>
+
+                <section class="element" id="3">
+                    <img src="images/pic.png" alt="">
+                    <section class="order">
+                        <section class="order_title">
+                            <h2>название заказа</h2>
+                            <span>Статус: в Моем магазине</span>
+                        </section>
+                        <section class="details">
+                            <span>Загружен: 11.04.13</span>
+                            <span>Фотополимер покрашенный</span>
+                            <span>Количество экземпляров: 1</span>
+                        </section>
+                        <div class="progress active">ВЫПОЛНЕН НА 60%</div>
+                        <div class="progress accent-color hide">+ Добавить в магазин</div>
+                    </section>
+                </section>
+
+                <section class="element" id="4">
+                    <img src="images/pic.png" alt="">
+                    <section class="order">
+                        <section class="order_title">
+                            <h2>название заказа</h2>
+                            <span>Статус: в печати</span>
+                        </section>
+                        <section class="details">
+                            <span>Загружен: 11.04.13</span>
+                            <span>Фотополимер покрашенный</span>
+                            <span>Количество экземпляров: 1</span>
+                            <span>Фотополимер покрашенный</span>
+                            <span>Количество экземпляров: 1</span>
+                        </section>
+                        <div class="progress active">ВЫПОЛНЕН НА 60%</div>
+                        <div class="progress accent-color hide">+ Добавить в магазин</div>
+                    </section>
+                </section>
+
+                <section class="element" id="5">
+                    <img src="images/pic.png" alt="">
+                    <section class="order">
+                        <section class="order_title">
+                            <h2>название заказа</h2>
+                            <span>Статус: в печати</span>
+                        </section>
+                        <section class="details">
+                            <span>Загружен: 11.04.13</span>
+                            <span>Фотополимер покрашенный</span>
+                            <span>Количество экземпляров: 1</span>
+                        </section>
+                        <div class="progress active">ВЫПОЛНЕН НА 60%</div>
+                        <div class="progress accent-color hide">+ Добавить в магазин</div>
+                    </section>
+                </section>
+
+                <section class="element" id="6">
+                    <img src="images/pic.png" alt="">
+                    <section class="order">
+                        <section class="order_title">
+                            <h2>название заказа</h2>
+                            <span>Статус: отправлен</span>
+                        </section>
+                        <section class="details">
+                            <span>Загружен: 11.04.13</span>
+                            <span>Фотополимер покрашенный</span>
+                            <span>Количество экземпляров: 1</span>
+                            <span>Цвет: черный</span>
+                            <span>Размер: 160 х 70</span>
+                        </section>
+                        <div class="progress active">ВЫПОЛНЕН НА 60%</div>
+                        <div class="progress accent-color hide">+ Добавить в магазин</div>
+                    </section>
+                </section>
+            </section>
+            
+            <p><a class="Up" href="#" onclick="return up()">Наверх</a></p>
+        </main>
+    </div>
+    
+    <footer>
+        <div class="content">
+            <form  class="content__form" onsubmit="makeCheck(this.address.value); return false;">
+                <label class="content__form__email">
+                    <span class="content__form__email-label">ваш email:</span>
+                    <input class="content__form__email-input" type="email" name="email" placeholder="DEDAL79@GMAIL.COM" required />
+                </label>
+                <label class="content__form__checkbox">
+                    <input class="form__checkbox-input" name="subscribe" type="checkbox" checked>
+                    <span class="form__checkbox-label">одписаться на новости</span>
+                </label>              
+                <input class="content__form__button" type="submit" value="зарегистрироваться" />  
+            </form>
+        </div>
+    </footer>
+
+</html>
